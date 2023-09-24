@@ -1,0 +1,78 @@
+:root {
+  --color-text-titulos: #ffffffff;
+  --color-texto: rgba(255, 255, 255, 0.85);
+  --color-acento: #e6e4c6;
+  --color-fondo: #0e3a47;
+  --color-fondo-tarjeta: #ffffff27;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: grid;
+  grid-template-areas: "aside header" "aside main" "footer footer";
+  grid-template-columns: 220px 1fr;
+}
+
+header {
+  grid-area: header;
+  background-image: url("./img/0e39c256714a4b7c0299323a82701647.jpg");
+  border-bottom-left-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header div{
+    margin:40px;
+}
+
+a:not(footer a){
+    color: var(--color-fondo);
+    text-decoration: none;
+    background-color: var(--color-acento);
+    border-radius: 5px;
+    padding: 10px 40px;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+footer a{
+    color:var(--color-texto);
+}
+
+
+
+main {
+  grid-area: main;
+}
+
+header img{
+    max-height: 400px;
+    flex-shrink: 1;
+    margin-right: 50px;
+
+}
+
+.tarjeta{
+    background-color: var(--color-fondo-tarjeta);
+}
+
+#tarjetasContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.proyecto{
+    flex-basis: 314px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
