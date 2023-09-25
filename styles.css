@@ -7,6 +7,7 @@
 }
 
 body {
+  margin: 0;
   background-color: var(--color-fondo);
   color: var(--color-texto);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -14,6 +15,9 @@ body {
   display: grid;
   grid-template-areas: "aside header" "aside main" "footer footer";
   grid-template-columns: 220px 1fr;
+}
+h1,h2,h3,h4,h5,h6{
+  color: var(--color-text-titulos);
 }
 
 header {
@@ -39,6 +43,7 @@ a:not(footer a){
 
 aside {
   grid-area: aside;
+  padding: 0 20px;
 }
 
 footer {
@@ -115,5 +120,57 @@ header img{
 .tecnologia:hover{
   color: var(--color-acento);
 }
+
+aside img{
+  max-width: 100%;
+}
+
+.presentacion div, .idioma div{
+  display: flex;
+  justify-content: space-between;
+}
+.presentacion span:last-of-type,.idioma span:last-of-type{
+  color: var(--color-text-titulos);
+}
+
+aside>div{
+  padding: 20px 0;
+  border-bottom: 2px solid var(--color-fondo);
+
+}
+aside>div:last-of-type{
+  border-bottom: unset;
+}
+
+progress{
+  -webkit-appearance: none;
+}
+
+::-webkit-progress-bar{
+  background-color: var(--color-fondo);
+}
+
+::-webkit-progress-inner-element{
+  height: 5px;
+}
+
+::-webkit-progress-value{
+  background-color: var(--color-acento);
+}
+
+.redes{
+  display: flex;
+  justify-content: space-around;
+}
+
+.redes img{
+  height: 20px;
+  filter: invert(1);
+  
+}
+.redes a {
+  background-color: unset;
+}
+
 
 
