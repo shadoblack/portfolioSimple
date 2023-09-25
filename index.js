@@ -12,9 +12,11 @@ proyectos.forEach((proyecto) => {
   nuevoProyecto.classList = "tarjeta proyecto";
   proyectosContainer.appendChild(nuevoProyecto);
   nuevoProyecto.innerHTML = `
-  <img src="${proyecto.imagen}" alt="${proyecto.titulo}">
+  <img src="img/proyectos/${proyecto.imagen}" alt="${proyecto.titulo}">
+  <div>
   <h3> ${proyecto.titulo} </h3>
   <p> ${proyecto.descripcion} </p>
   <p>Tecnologías:${getTecnologias(proyecto.tecnologias)}</p>
+  </div>
   <a href="${proyecto.link}" target="_blank">Ver proyecto</a>`;
 });
