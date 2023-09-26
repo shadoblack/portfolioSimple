@@ -73,7 +73,7 @@ const getIconoRed = (red) => {
 const nuevoRedes = document.createElement("div");
 nuevoRedes.classList = "redes";
 informacionPersonal.redes.forEach(dato => {
-  nuevoRedes.innerHTML += `<a href="${dato[1]} target="_blank">
+  nuevoRedes.innerHTML += `<a href="${dato[1]}">
   <img src="img/${getIconoRed(dato[0])}">
   </a>
   `
